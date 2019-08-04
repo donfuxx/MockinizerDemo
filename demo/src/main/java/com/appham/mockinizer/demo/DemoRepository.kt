@@ -15,4 +15,8 @@ class DemoRepository {
         return apiService.demoApi.getMocked()
     }
 
+    fun getMockedError(): Single<List<Post>> {
+        return apiService.demoApi.getMockedError()
+    }
+
 }

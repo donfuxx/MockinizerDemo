@@ -10,13 +10,17 @@ class MainViewModel : ViewModel() {
 
     fun runDemo() {
 
-        demoRepository.getMocked()
-            .subscribeOn(Schedulers.io())
-            .subscribe()
 
         demoRepository.getPosts()
             .subscribeOn(Schedulers.io())
             .subscribe()
 
+        demoRepository.getMocked()
+            .subscribeOn(Schedulers.io())
+            .subscribe()
+
+        demoRepository.getMockedError()
+            .subscribeOn(Schedulers.io())
+            .subscribe()
     }
 }

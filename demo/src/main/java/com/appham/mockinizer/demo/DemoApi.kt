@@ -14,4 +14,7 @@ interface DemoApi {
     @GET("mocked")
     fun getMocked(): Single<List<Post>>
 
+    @GET("mockedError")
+    fun getMockedError(): Single<List<Post>>
+
 }
