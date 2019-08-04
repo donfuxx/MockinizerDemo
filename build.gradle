@@ -22,7 +22,7 @@ buildscript {
         material_version = '1.0.0'
         dagger_version = '2.21'
         room_version = '2.1.0'
-        mockinizer_version = '0.9.3'
+        mockinizer_version = '1.0.0'
         logkitten_version = '1.2.2'
         dbinspector_version = '3.4.1@aar'
         mockito_kotlin_version = '2.1.0'
@@ -37,7 +37,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-
+        mavenLocal()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
@@ -54,6 +54,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenLocal()
         maven { url 'https://jitpack.io' }
     }
 }
