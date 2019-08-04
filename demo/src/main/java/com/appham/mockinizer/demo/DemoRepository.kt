@@ -11,7 +11,7 @@ class DemoRepository {
         return apiService.demoApi.getPosts()
     }
 
-    fun getMocked(): Single<List<Post>> {
+    fun getMocked(): Single<Post> {
         return apiService.demoApi.getMocked()
     }
 

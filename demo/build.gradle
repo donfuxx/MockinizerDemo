@@ -14,7 +14,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        buildConfigField("String", "BASE_URL", "\"https://my-json-server.typicode.com/typicode/demo/\"")
+        buildConfigField("String", "BASE_URL", "\"https://my-json-server.typicode.com/\"")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -8,11 +8,11 @@ import retrofit2.http.GET
  */
 interface DemoApi {
 
-    @GET("posts")
+    @GET("typicode/demo/posts")
     fun getPosts(): Single<List<Post>>
 
     @GET("mocked")
-    fun getMocked(): Single<List<Post>>
+    fun getMocked(): Single<Post>
 
     @GET("mockedError")
     fun getMockedError(): Single<List<Post>>
