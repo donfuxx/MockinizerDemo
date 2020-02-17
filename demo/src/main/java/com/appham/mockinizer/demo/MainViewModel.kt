@@ -1,6 +1,7 @@
 package com.appham.mockinizer.demo
 
 import androidx.lifecycle.ViewModel
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class MainViewModel : ViewModel() {
@@ -21,6 +22,8 @@ class MainViewModel : ViewModel() {
 
         demoRepository.getMockedError()
             .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .onErrorReturn { emptyList() }
             .subscribe()
     }
 }
