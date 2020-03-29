@@ -11,12 +11,18 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 private const val BASE_URL = BuildConfig.BASE_URL;
 
-class ApiService {
+interface ApiService {
+
+    val demoApi: DemoApi
+
+}
+
+class RealApi : ApiService {
 
     /**
      * Create api interface for posts api
      */
-    val demoApi: DemoApi by lazy {
+    override val demoApi: DemoApi by lazy {
         retrofit.create(DemoApi::class.java)
     }
 
@@ -46,3 +52,4 @@ class ApiService {
 
 
 }
+

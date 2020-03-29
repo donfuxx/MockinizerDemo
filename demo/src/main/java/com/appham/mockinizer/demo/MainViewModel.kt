@@ -5,10 +5,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
-class MainViewModel : ViewModel() {
-
-    private val demoRepository: DemoRepository =
-        DemoRepository()
+class MainViewModel(
+    private val demoRepository: DemoRepository = DemoRepository()
+) : ViewModel() {
 
     fun runDemo() {
 
