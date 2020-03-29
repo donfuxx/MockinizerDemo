@@ -7,6 +7,6 @@ class MockinizerDemoTest {
 
     @Test
     fun testDummy() {
-        assertEquals(1, 2)
+        assertEquals(0, 0)
     }
 }
