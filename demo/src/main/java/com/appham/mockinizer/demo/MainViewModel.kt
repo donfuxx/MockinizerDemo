@@ -1,14 +1,12 @@
 package com.appham.mockinizer.demo
 
 import androidx.lifecycle.ViewModel
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
-class MainViewModel : ViewModel() {
-
-    private val demoRepository: DemoRepository =
-        DemoRepository()
+class MainViewModel(
+    private val demoRepository: DemoRepository = DemoRepository()
+) : ViewModel() {
 
     fun runDemo() {
 
@@ -19,7 +17,6 @@ class MainViewModel : ViewModel() {
 
         demoRepository.getMockedError()
             .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
             .onErrorReturn { emptyList() }
             .delay(2, TimeUnit.SECONDS)
             .subscribe()
